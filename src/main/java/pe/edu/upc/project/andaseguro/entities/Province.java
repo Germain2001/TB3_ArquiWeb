@@ -1,10 +1,13 @@
 package pe.edu.upc.project.andaseguro.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "Province")
-public class Province {
+public class Province implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,12 +16,17 @@ public class Province {
     @Column(name = "NProvince", length = 45, nullable = false)
     private String NProvince;
 
+    @ManyToOne
+    @JoinColumn(name = "idDepartment", nullable = false)
+    private Department department;
+
     public Province() {
     }
 
-    public Province(int idProvince, String NProvince) {
+    public Province(int idProvince, String NProvince, Department department) {
         this.idProvince = idProvince;
         this.NProvince = NProvince;
+        this.department = department;
     }
 
     public int getIdProvince() {
@@ -35,5 +43,13 @@ public class Province {
 
     public void setNProvince(String NProvince) {
         this.NProvince = NProvince;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

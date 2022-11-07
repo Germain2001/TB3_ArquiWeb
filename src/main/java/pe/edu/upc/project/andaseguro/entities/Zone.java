@@ -1,15 +1,28 @@
 package pe.edu.upc.project.andaseguro.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Zone")
 public class Zone {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idZone;
+
+    @Column(name = "NZone", length = 45, nullable = false)
     private String NZone;
+
+    @Column(name = "CFlag", nullable = false)
     private Boolean CFlag;
-    private long CLength;
+
+    @Column(name = "CLength", nullable = false)
+    private int CLength;
 
     public Zone() {
     }
 
-    public Zone(int idZone, String NZone, Boolean CFlag, long CLength) {
+    public Zone(int idZone, String NZone, Boolean CFlag, int CLength) {
         this.idZone = idZone;
         this.NZone = NZone;
         this.CFlag = CFlag;
@@ -40,11 +53,11 @@ public class Zone {
         this.CFlag = CFlag;
     }
 
-    public long getCLength() {
+    public int getCLength() {
         return CLength;
     }
 
-    public void setCLength(long CLength) {
+    public void setCLength(int CLength) {
         this.CLength = CLength;
     }
 }

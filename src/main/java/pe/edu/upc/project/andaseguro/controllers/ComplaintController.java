@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.project.andaseguro.entities.Complaint;
 import pe.edu.upc.project.andaseguro.entities.Department;
 import pe.edu.upc.project.andaseguro.servicesinterfaces.IComplaintService;
-import pe.edu.upc.project.andaseguro.servicesinterfaces.IDepartmentService;
 
-import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/denuncias")
@@ -40,5 +39,9 @@ public class ComplaintController {
     @PostMapping("/buscar")
     public List<Complaint> buscar(@RequestBody Complaint co) {
         return complaintService.searchName(co.getNComplaint());
+    }
+    @GetMapping("/{id}")
+    public Optional<Complaint> listarId(@PathVariable("id") Integer id) {
+        return complaintService.listarId(id);
     }
 }

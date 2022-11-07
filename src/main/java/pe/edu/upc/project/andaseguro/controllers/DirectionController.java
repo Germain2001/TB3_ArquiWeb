@@ -8,6 +8,7 @@ import pe.edu.upc.project.andaseguro.servicesinterfaces.IDirectionService;
 
 import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/direcciones")
@@ -38,5 +39,10 @@ public class DirectionController {
     @PostMapping("/buscar")
     public List<Direction> buscar(@RequestBody Direction di) {
         return directionService.searchName(di.getNUrbanizacion());
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Direction> listarId(@PathVariable("id") Integer id) {
+        return directionService.listarId(id);
     }
 }

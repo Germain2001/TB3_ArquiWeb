@@ -8,6 +8,7 @@ import pe.edu.upc.project.andaseguro.servicesinterfaces.IDistrictService;
 
 import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/distritos")
@@ -39,5 +40,9 @@ public class DistrictController {
     @PostMapping("/buscar")
     public List<District> buscar(@RequestBody District di) {
         return districtService.searchName(di.getNDistrict());
+    }
+    @GetMapping("/{id}")
+    public Optional<District> listarId(@PathVariable("id") Integer id) {
+        return districtService.listarId(id);
     }
 }

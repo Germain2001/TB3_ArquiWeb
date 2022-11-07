@@ -2,7 +2,6 @@ package pe.edu.upc.project.andaseguro.servicesimpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.project.andaseguro.entities.Complaint;
 import pe.edu.upc.project.andaseguro.entities.Direction;
 import pe.edu.upc.project.andaseguro.repositories.IDirectionRepository;
 import pe.edu.upc.project.andaseguro.servicesinterfaces.IDirectionService;
@@ -17,8 +16,14 @@ public class DirectionServiceImpl implements IDirectionService {
     private IDirectionRepository directionRepository;
 
     @Override
-    public void insert(Direction direction) {
-        directionRepository.save(direction);
+    public Boolean insert(Direction direction) {
+
+        Direction objDirection = directionRepository.save(direction);
+        if (objDirection == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
@@ -34,5 +39,10 @@ public class DirectionServiceImpl implements IDirectionService {
     @Override
     public List<Direction> searchName(String nameDirection) {
         return directionRepository.searchName(nameDirection);
+    }
+
+    @Override
+    public Optional<Direction> listarId(int idDirection) {
+        return directionRepository.findById(idDirection);
     }
 }
