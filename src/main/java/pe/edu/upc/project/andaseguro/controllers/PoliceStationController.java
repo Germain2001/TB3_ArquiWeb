@@ -2,10 +2,12 @@ package pe.edu.upc.project.andaseguro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.project.andaseguro.entities.Department;
 import pe.edu.upc.project.andaseguro.entities.PoliceStation;
 import pe.edu.upc.project.andaseguro.servicesinterfaces.IPoliceStationService;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/comisarias")
@@ -37,5 +39,10 @@ public class PoliceStationController {
     @PostMapping("/buscar")
     public List<PoliceStation> buscar(@RequestBody PoliceStation d){
         return policeStationService.searchName(d.getNPoliceStation());
+    }
+
+    @GetMapping("/{id}")
+    public Optional<PoliceStation> listarId(@PathVariable("id") Integer id) {
+        return policeStationService.listarId(id);
     }
 }

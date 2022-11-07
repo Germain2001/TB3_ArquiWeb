@@ -43,6 +43,6 @@ public class ComplaintServiceImpl implements IComplaintService {
 
     @Override
     public Optional<Complaint> listarId(int idComplate) {
-        return Optional.empty();
+        return complaintRepository.findById(idComplate);
     }
 }

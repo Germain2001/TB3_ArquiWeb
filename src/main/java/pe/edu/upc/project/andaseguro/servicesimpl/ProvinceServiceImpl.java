@@ -42,6 +42,6 @@ public class ProvinceServiceImpl implements IProvinceService {
 
     @Override
     public Optional<Province> listarId(int idProvince) {
-        return Optional.empty();
+        return provinceRepository.findById(idProvince);
     }
 }

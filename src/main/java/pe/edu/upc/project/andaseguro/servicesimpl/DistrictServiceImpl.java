@@ -44,6 +44,6 @@ public class DistrictServiceImpl implements IDistrictService {
 
     @Override
     public Optional<District> listarId(int idDistrict) {
-        return Optional.empty();
+        return districtRepository.findById(idDistrict);
     }
 }

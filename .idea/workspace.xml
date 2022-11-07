@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="582c4b25-92ab-4559-9dbc-45ea9236eff3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/project/andaseguro/repositories/IRouteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/project/andaseguro/repositories/IRouteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="481edf59-620b-43c7-82f5-34c738eeb054" name="Changes" comment="Creacion del la entidad Provincia" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,11 +24,15 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -31,22 +40,32 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2GmB5rvoXTD5wTlMVdFF8Cb3AKw" />
+  <component name="ProjectId" id="2GFTqxM8vJciIxnltmzeJ90aRdb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Usuario/OneDrive/Documentos/GitHub/TB3_ArquiWeb",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "08212541958bb1f7b584db064398ba59"
-  }
-}]]></component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.AndaSeguroApplication">
+    <configuration name="All in andaSeguro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="andaSeguro" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AndaSeguroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="andaSeguro" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pe.edu.upc.project.andaseguro.AndaSeguroApplication" />
@@ -54,17 +73,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in andaSeguro" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="582c4b25-92ab-4559-9dbc-45ea9236eff3" name="Changes" comment="" />
-      <created>1666983698349</created>
+      <changelist id="481edf59-620b-43c7-82f5-34c738eeb054" name="Changes" comment="" />
+      <created>1665983529706</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1666983698349</updated>
-      <workItem from="1666983699604" duration="1220000" />
+      <updated>1665983529706</updated>
+      <workItem from="1665983532053" duration="6219000" />
+      <workItem from="1666033647531" duration="4437000" />
+      <workItem from="1666055159214" duration="6892000" />
+      <workItem from="1666374191734" duration="9050000" />
+      <workItem from="1666400546933" duration="4137000" />
+      <workItem from="1666504380978" duration="397000" />
+      <workItem from="1666542336175" duration="12608000" />
+      <workItem from="1666580745963" duration="3976000" />
+      <workItem from="1666585167295" duration="599000" />
+      <workItem from="1666591357399" duration="1675000" />
+      <workItem from="1666659151228" duration="5587000" />
+      <workItem from="1666665874152" duration="2541000" />
+      <workItem from="1667362016610" duration="10277000" />
+      <workItem from="1667609310498" duration="6829000" />
+      <workItem from="1667707992202" duration="10030000" />
+      <workItem from="1667763422189" duration="9227000" />
+      <workItem from="1667804630881" duration="8318000" />
+      <workItem from="1667834705975" duration="711000" />
+      <workItem from="1667836541012" duration="3000" />
+      <workItem from="1667837206499" duration="106000" />
     </task>
+    <task id="LOCAL-00001" summary="Creacion del la entidad Provincia">
+      <created>1666669861532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666669861532</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Creacion del la entidad Provincia">
+      <created>1666670217598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666670217598</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,5 +138,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creacion del la entidad Provincia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion del la entidad Provincia" />
   </component>
 </project>

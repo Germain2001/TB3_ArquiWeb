@@ -40,6 +40,6 @@ public class ZoneServiceImpl implements IZoneService {
 
     @Override
     public Optional<Zone> listarId(int idZone) {
-        return Optional.empty();
+        return zoneRepository.findById(idZone);
     }
 }

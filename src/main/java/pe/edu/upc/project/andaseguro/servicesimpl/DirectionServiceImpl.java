@@ -43,6 +43,6 @@ public class DirectionServiceImpl implements IDirectionService {
 
     @Override
     public Optional<Direction> listarId(int idDirection) {
-        return Optional.empty();
+        return directionRepository.findById(idDirection);
     }
 }

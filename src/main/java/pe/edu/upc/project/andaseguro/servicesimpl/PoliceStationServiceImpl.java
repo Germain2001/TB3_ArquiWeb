@@ -42,6 +42,6 @@ public class PoliceStationServiceImpl implements IPoliceStationService {
 
     @Override
     public Optional<PoliceStation> listarId(int idPoliceStation) {
-        return Optional.empty();
+        return policeStationRepository.findById(idPoliceStation);
     }
 }
