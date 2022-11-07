@@ -2,13 +2,12 @@ package pe.edu.upc.project.andaseguro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.project.andaseguro.entities.Department;
 import pe.edu.upc.project.andaseguro.entities.Direction;
 import pe.edu.upc.project.andaseguro.servicesinterfaces.IDirectionService;
+import java.util.Optional;
 
 import java.text.ParseException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/direcciones")
