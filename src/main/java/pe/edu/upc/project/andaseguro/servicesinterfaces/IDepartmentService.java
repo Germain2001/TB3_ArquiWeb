@@ -9,4 +9,6 @@ public interface IDepartmentService {
     public List<Department> list();
     public void delete(int idDepartment);
     List<Department> searchName(String nameDepartment);
+
+    public Optional<Department> listarId(int idDepartment);
 }

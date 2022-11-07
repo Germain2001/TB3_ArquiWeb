@@ -5,8 +5,9 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "PoliceStation")
-public class PoliceStation {
+public class PoliceStation implements Serializable{
 
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPoliceStation;
@@ -17,13 +18,18 @@ public class PoliceStation {
     @Column(name = "TCell", length = 10, nullable = false)
     private long TCell;
 
+    @OneToOne
+    @JoinColumn(name = "idDirection", nullable = false)
+    private Direction direction;
+
     public PoliceStation() {
     }
 
-    public PoliceStation(int idPoliceStation, String NPoliceStation, long TCell) {
+    public PoliceStation(int idPoliceStation, String NPoliceStation, long TCell, Direction direction) {
         this.idPoliceStation = idPoliceStation;
         this.NPoliceStation = NPoliceStation;
         this.TCell = TCell;
+        this.direction = direction;
     }
 
     public int getIdPoliceStation() {
@@ -48,5 +54,13 @@ public class PoliceStation {
 
     public void setTCell(long TCell) {
         this.TCell = TCell;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
 }

@@ -17,7 +17,14 @@ public class ComplaintServiceImpl implements IComplaintService {
     private IComplaintRepository complaintRepository;
 
     @Override
-    public void insert(Complaint complaint) { complaintRepository.save(complaint);}
+    public Boolean insert(Complaint complaint) {
+        Complaint objComplaint = complaintRepository.save(complaint);
+        if (objComplaint == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     @Override
     public List<Complaint> list() {
@@ -32,5 +39,10 @@ public class ComplaintServiceImpl implements IComplaintService {
     @Override
     public List<Complaint> searchName(String nameComplaint) {
         return complaintRepository.searchName(nameComplaint);
+    }
+
+    @Override
+    public Optional<Complaint> listarId(int idComplate) {
+        return Optional.empty();
     }
 }

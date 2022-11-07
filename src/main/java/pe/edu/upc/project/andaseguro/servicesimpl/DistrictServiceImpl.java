@@ -17,8 +17,14 @@ public class DistrictServiceImpl implements IDistrictService {
     private IDistrictRepository districtRepository;
 
     @Override
-    public void insert(District district) {
-        districtRepository.save(district);
+    public Boolean insert(District district) {
+
+        District objDistrict = districtRepository.save(district);
+        if (objDistrict == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
@@ -34,5 +40,10 @@ public class DistrictServiceImpl implements IDistrictService {
     @Override
     public List<District> searchName(String nameDistrict) {
         return districtRepository.searchName(nameDistrict);
+    }
+
+    @Override
+    public Optional<District> listarId(int idDistrict) {
+        return Optional.empty();
     }
 }

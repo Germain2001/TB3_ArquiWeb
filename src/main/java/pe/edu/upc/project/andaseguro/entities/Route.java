@@ -1,8 +1,18 @@
 package pe.edu.upc.project.andaseguro.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Route")
 public class Route {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRoute;
+
+    @Column(name = "CPointInit", nullable = false)
     private long CPointInit;
+
+    @Column(name = "CPointEnd", nullable = false)
     private long CPointEnd;
 
     public Route() {

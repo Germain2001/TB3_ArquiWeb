@@ -35,4 +35,9 @@ public class DepartmentServiceImpl implements IDepartmentService {
     public List<Department> searchName(String nameDepartment) {
         return departmentRepository.searchName(nameDepartment);
     }
+
+    @Override
+    public Optional<Department> listarId(int idDepartment) {
+        return departmentRepository.findById(idDepartment);
+    }
 }
