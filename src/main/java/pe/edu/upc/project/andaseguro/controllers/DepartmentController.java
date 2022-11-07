@@ -8,6 +8,7 @@ import pe.edu.upc.project.andaseguro.servicesinterfaces.IDepartmentService;
 
 import java.text.ParseException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/departamentos")
@@ -39,6 +40,10 @@ public class DepartmentController {
     @PostMapping("/buscar")
     public List<Department> buscar(@RequestBody Department d){
         return departmentService.searchName(d.getNDepartment());
+    }
+    @GetMapping("/{id}")
+    public Optional<Department> listarId(@PathVariable("id") Integer id) {
+        return departmentService.listarId(id);
     }
 
 }

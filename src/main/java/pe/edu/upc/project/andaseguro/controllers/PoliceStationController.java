@@ -1,14 +1,13 @@
 package pe.edu.upc.project.andaseguro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.project.andaseguro.entities.PoliceStation;
 import pe.edu.upc.project.andaseguro.servicesinterfaces.IPoliceStationService;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/comisarias")
 public class PoliceStationController {
 

@@ -3,11 +3,8 @@ package pe.edu.upc.project.andaseguro.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.project.andaseguro.entities.Complaint;
-import pe.edu.upc.project.andaseguro.entities.Department;
 import pe.edu.upc.project.andaseguro.servicesinterfaces.IComplaintService;
-import pe.edu.upc.project.andaseguro.servicesinterfaces.IDepartmentService;
 
-import java.text.ParseException;
 import java.util.List;
 
 @RestController

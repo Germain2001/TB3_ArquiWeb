@@ -16,10 +16,15 @@ public class ProvinceServiceImpl implements IProvinceService {
     private IProvinceRepository provinceRepository;
 
     @Override
-    public void insert(Province province) {
-        provinceRepository.save(province);
-    }
+    public Boolean insert(Province province) {
 
+        Province objProvince = provinceRepository.save(province);
+        if (objProvince == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
     @Override
     public List<Province> list() {
         return provinceRepository.findAll();
@@ -33,5 +38,10 @@ public class ProvinceServiceImpl implements IProvinceService {
     @Override
     public List<Province> searchName(String nameProvince) {
         return provinceRepository.searchName(nameProvince);
+    }
+
+    @Override
+    public Optional<Province> listarId(int idProvince) {
+        return Optional.empty();
     }
 }
